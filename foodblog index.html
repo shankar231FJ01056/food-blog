@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog - Recipes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+
+        /* Card Styles */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Layout for Cards */
+        .recipe-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .recipe-col {
+            width: 48%;
+        }
+
+               
+    </style>
+</head>
+<body>
+
+     <!-- Header -->
+    <header class="bg-danger text-white text-center py-3">
+        <h1>Welcome to my Food Blog</h1>
+        <p>Make your mouth watering with exiting dishes</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="container mt-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="recipes.html">Recipes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Latest Recipes</li>
+        </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-light py-5 text-center">
+        <div class="container">
+            <h2>Explore and try Exciting Recipes in Hot and Spicy Section..!!</h2>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZzcN1rARMutKgl9DcqQkHuy9zyXZy1QObw&s">
+            <p>Discover your next favorite dish with our hand-picked recipes for every occasion.</p>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section class="container">
+        <div class="recipe-row">
+            <!-- Recipe 1 -->
+            <div class="recipe-col">
+                <div class="card">
+                    <img src="https://t3.ftcdn.net/jpg/11/08/43/04/360_F_1108430450_jWToQycz9FahqmUdkcmglCqmAKSyuRcp.jpg" alt="Recipe 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Buldak (Hot and Spicy Chicken)</h3>
+                        <p class="card-text">Buldak is a spicy chicken dish that has been attributed to both its unique flavors and spiciness.</p>
+                        <a href="#" class="btn" onclick="toggleDescription('recipe1')">Read More</a>
+                  <p id="recipe1" style="display:none;">Rinse chicken drum sticks in cold water and de-done meat with a sharp knife. Cut into 4 even pieces per leg drum -OR- rinse chicken breasts in cold water and cut into bite-size pieces.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="recipe-col">
+                <div class="card">
+                    <img src="https://www.countrycuisine.eu/wp-content/uploads/2018/09/21.-Chicken-Fillet-Hot-Spicy_1460x900px.jpg" alt="Recipe 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Chicken Fillet Hot & Spicy</h3>
+                        <p class="card-text">When you serve chicken breast in a hot and spicy breadcrumb, you truly serve a plate of happiness. Tasty, easy to prepare and endless possibilities.</p>
+                        <a href="#" class="btn" onclick="toggleDescription('recipe2')">Read More</a>
+                        <p id="recipe2" style="display:none;">These breasts are marinated in a spicy sauce and baked until crispy. Serve them with a cooling dip for the perfect contrast.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-row">
+            <!-- Recipe 3 -->
+            <div class="recipe-col">
+                <div class="card">
+                    <img src="https://c8.alamy.com/comp/2G3KT7N/restaurant-style-spicy-chicken-biryani-served-with-raita-and-salan-popular-indian-or-pakistani-non-vegetarian-food-2G3KT7N.jpg" >
+                    <div class="card-body">
+                        <h3 class="card-title">Spicy Chicken Biryani</h3>
+                        <p class="card-text">Chicken Biryani, is a classic Indian dish that has captured the hearts and taste buds of food lovers around the world. </p>
+                        <a href="#" class="btn" onclick="toggleDescription('recipe3')">Read More</a>
+                        <p id="recipe3" style="display:none;"> The recipe typically calls for a combination of aromatic spices like cumin, coriander, turmeric, and cinnamon, which are blended together to create a unique and flavourful spice blend.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 4 -->
+            <div class="recipe-col">
+                <div class="card">
+                    <img src="https://www.datocms-assets.com/20941/1704906734-spicy-foods-list-sichuan-hot-pot.png?auto=compress&dpr=1&fm=jpg&w=850" >
+                    <div class="card-body">
+                        <h5 class="card-title">Sichuan Hot Pot</h5>
+                        <p class="card-text">The hottest of the Chinese hot pots, Sichuan hot pot is named for the province in Southwest China from which it originates, an area known for spicy food. Described on occasion as both ‘eye-watering’ and ‘tongue-numbing’,</p>
+                        <a href="#" class="btn" onclick="toggleDescription('recipe4')">Read More</a>
+                        <p id="recipe4" style="display:none;">Sichuan Hot Pot, is a one pot meal with a base of red chillies and SIchuan peppercorn-infused hot pork or beef broth, to which ingredients such as meat, doubanjiang, garlic, onions, Soya beans and other vegetables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination Section -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="index.html">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="salad.html">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="msic.html">3</a>
+                </li>
+                  <li class="page-item">
+                    <a class="page-link" href="contact.html">4</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+ 
+ <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; Food_Blog. All rights reserved.</p>
+    </footer>
+
+<script>
+  function toggleDescription(id) {
+    const element = document.getElementById(id);
+    if (element.style.display === "none") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+</script>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
